@@ -30,7 +30,7 @@
     justify-content: center;
     gap: 16px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto 30px auto;
 }
 
@@ -40,49 +40,58 @@
     background-color: white;
     border-radius: 5px;
     gap: 8px;
-    padding: 8px;
-    flex: 1 1 380px;
+    padding: 0;
+    flex: 1 1 800px;
     min-width: 0;
-    max-width: 420px;
+    max-width: 800px;
+    height: 48px;
 }
 
 .hero input {
-    flex: 1 1 0%;
-    font-size: 16px;
+    flex: 3 1 0%;
+    font-size: 18px;
     outline: none;
     border: none;
-    padding-left: 10px;
+    padding: 12px 16px;
     min-width: 0;
+    height: 48px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .hero button {
     border: none;
     background-color: #3535baff;
     color: white;
-    font-size: 16px;
-    padding: 10px 18px;
-    border-radius: 5px;
+    font-size: 15px;
+    padding: 0 18px;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     white-space: nowrap;
+    height: 48px;
+    display: flex;
+    align-items: center;
 }
 
 .sort-buttons-container {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .sort-button {
     border: none;
     background-color: #3535baff;
     color: white;
-    font-size: 16px;
-    padding: 10px 24px;
+    font-size: 14px;
+    padding: 0 14px;
     border-radius: 5px;
     cursor: pointer;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 48px;
 }
 
-/* Crypto table styles */
 .crypto-table {
     max-width: 800px;
     margin: auto;
@@ -126,7 +135,16 @@
     text-align: center;
 }
 
-/* Responsive adjustments */
+@media (max-width: 900px) {
+    .form-and-buttons-row {
+        max-width: 100%;
+        gap: 12px;
+    }
+    .hero form {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .table-layout {
         grid-template-columns: 0.5fr 3fr 1fr 1fr;
@@ -136,7 +154,6 @@
         display: none;
     }
 
-    /* Stack form and buttons vertically on smaller screens */
     .form-and-buttons-row {
         flex-direction: column;
         gap: 12px;
@@ -149,6 +166,11 @@
 
     .sort-buttons-container {
         width: 100%;
+        justify-content: center;
+    }
+
+    .sort-button {
+        width: auto;
         justify-content: center;
     }
 }
@@ -164,5 +186,6 @@
 
     .hero form {
         width: 100%;
+        max-width: 100%;
     }
 }

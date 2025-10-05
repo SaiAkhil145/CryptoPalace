@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Home.css'
 import { CoinContext } from '../../context/CoinContext'
 import { Link } from 'react-router-dom'
+import { FaCoins, FaChartLine } from 'react-icons/fa'
 
 const Home = () => {
     const { allCoin, currency } = useContext(CoinContext)
@@ -66,9 +67,11 @@ const Home = () => {
 
                     <div className="sort-buttons-container">
                         <button onClick={sortByMarketCap} className="sort-button">
+                            <FaCoins style={{ marginRight: "8px" }} />
                             Sort by Market Cap
                         </button>
                         <button onClick={sortByChange} className="sort-button">
+                            <FaChartLine style={{ marginRight: "8px" }} />
                             Sort by 24H Change
                         </button>
                     </div>
@@ -105,4 +108,3 @@ const Home = () => {
 }
 
 export default Home
-
